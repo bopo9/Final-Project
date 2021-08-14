@@ -1,0 +1,7 @@
+@mixin pixelBorder( $width, $color) {
+        box-shadow:
+                $width 0 $color,
+                -$width 0 $color,
+                0 (-$width) $color,
+                0 $width $color;
+}

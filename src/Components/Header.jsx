@@ -10,7 +10,7 @@ const Header = props => (
     <header  className={`header header_isDark`}>
         <div className={`header__inner_wrapper`}>
             <img className={`header__img`} src={logoImg} alt={`logo`} />
-            <a className={`header__logo_text`} href={`/`}>Retro Twit</a>
+            <a className={`header__logo_text`} href={`/`}>THE LUCY</a>
         </div>
         <div onClick={start} className={'burger burger__menu'}>
             <img className="burger__img"

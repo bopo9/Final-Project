@@ -62,6 +62,7 @@ module.exports = {
         liveReload: true,
         hot: true,
         port: 8080,
+        historyApiFallback: true
     },
     resolve: {
         extensions: [".js", ".jsx"],

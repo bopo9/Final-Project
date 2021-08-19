@@ -1,17 +1,18 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 
 const Navbar = props => (
     <nav className={`navbar pixelBorder`}>
         <ul className={`navbar__list`}>
             <li className={`navbar__item`}>
-                <a className={`navbar__link`} href="">Home</a>
+                <Link className={`navbar__link`} to={'/home'}>Home</Link>
             </li>
             <li className={`navbar__item`}>
-                <a className={`navbar__link`} href="">Profile</a>
+                <Link className={`navbar__link`} to={'/profile'}>Profile</Link>
             </li>
             <li className={`navbar__item`}>
-                <a className={`navbar__link`} href="">Log out</a>
+                <Link className={`navbar__link`} to={'/exit' } >Log out</Link>
             </li>
         </ul>
     </nav>

@@ -2,6 +2,7 @@
 @import "mixin"
 @import "colors"
 @import "vars"
+@import "btn-list"
 
 body
   background-color: $bgColor
@@ -129,26 +130,9 @@ body
 .tweet__btn
   align-self: flex-end
   margin-top: 20px
-  padding: 0 30px
-  line-height: 40px
   cursor: pointer
   border: none
-  &:before
-    top: -$outline-width
-    left: 0
-    border-top: $outline-width black solid
-    border-bottom: $outline-width black solid
-  &.btn_tweet
-    color: $lightGreen
-    background: $reset-button-background
-    box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $reset-shadow-color
-    &:hover,
-    &:focus
-      background: $reset-sec-button-background
-      box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $reset-shadow-color
-    &:active
-      box-shadow: inset $shadow-width $shadow-width 0 0 $reset-shadow-color
-      color: $logo
+
 
 .tweet__list
   display: flex
@@ -227,5 +211,60 @@ body
   max-width: 60px
   &:hover
     color: $logo
+
+
+///////////////////////////////////////////////////
+/////////////        Login          ///////////////
+///////////////////////////////////////////////////
+
+
+.auth
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.auth__form
+  display: flex
+  flex-direction: column
+  max-width: 500px
+  width: 100%
+  &.form_auth
+    margin: 0 30px
+    background-color: #484848
+    padding: 30px
+  &>label
+    color: $redLight
+    transition: .5s
+    @include adaptive-font(20, 12)
+
+
+.auth__input
+  margin: 10px 0
+  min-width: 210px
+  &.input_auth
+    -webkit-appearance: none
+    color: $logo
+    background-color:  $inputBgColor
+    line-height: 45px
+    padding: 0 15px
+    border: none
+    @include adaptive-font(18, 10)
+    &:focus
+      outline: none
+  &:invalid
+    @include pixelBorder(3px, $redLight)
+
+.auth__btn
+  margin-top: 10px
+  align-self: flex-end
+  &.btn_auth
+    border: none
+    outline: none
+    font-size: 13px
+    cursor: pointer
+
+
 
 @import "media"

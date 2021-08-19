@@ -1,0 +1,37 @@
+.btn-md
+  width: 130px
+  font-size: 16px
+  line-height: 30px
+  padding: 5px 0
+
+.btn-sm
+  line-height: 20px
+  padding: 0 15px
+
+.btn-red
+  border: none
+  outline: none
+  color: $lightGreen
+  background: $red-button-background
+  box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $red-shadow-color
+  &:hover,
+  &:focus
+    background: $red-sec-button-background
+    box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $red-shadow-color
+  &:active
+    box-shadow: inset $shadow-width $shadow-width 0 0 $red-shadow-color
+    color: $logo
+
+.btn-pink
+  border: none
+  outline: none
+  color: $lightGreen
+  background: $pink-button-background
+  box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $pink-shadow-color
+  &:hover,
+  &:focus
+    background: $pink-sec-button-background
+    box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $pink-shadow-color
+  &:active
+    box-shadow: inset $shadow-width $shadow-width 0 0 $pink-shadow-color
+    color: $logo

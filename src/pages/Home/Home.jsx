@@ -4,18 +4,30 @@ import {
     Navbar,
     Main,
     TweetForm,
-    Tweet, Headers
-} from '../../Components'
+    Feed,
+    Tweet,
+    CreatePost
+} from '../../Components';
+
 
 class Home extends Component {
+    constructor() {
+        super();
+    }
+
+    componentDidMount(){
+        document.title = "ATOM - Home";
+
+    }
+
     render() {
         return <>
             <Header />
             <Main>
-                <Navbar />
+                <Navbar  />
                 <div className="tweet__wrapper">
-                    <TweetForm />
-                    <Tweet />
+                    <CreatePost />
+                    <Feed />
                 </div>
             </Main>
         </>

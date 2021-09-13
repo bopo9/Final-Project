@@ -145,9 +145,14 @@ body
   padding: 10px
   flex-basis: 100%
   max-width: 700px
+  min-width: 300px
+  width: 90%
   display: flex
   flex-direction: column
   @include pixelBorder(3px, $lightGreen)
+  &>button
+    margin-top: 15px
+    width: 100%
 
 .tweet__header
   display: flex
@@ -172,13 +177,14 @@ body
   padding: 0 15px
 
 .tweet__name
+  @include adaptive-font(20, 12)
   color: $logo
 
 .tweet__date
   margin: 15px 0
   color: $lightGreen
-  font-size: 10px
-  //align-self: flex-end
+  @include adaptive-font(20, 10)
+  align-self: center
 
 .tweet__content
   display: flex
@@ -189,7 +195,7 @@ body
 .tweet__content_text
   margin: 15px 0
   color: $logo
-  font-size: 14px
+  @include adaptive-font(18, 12)
   word-wrap: break-word
   line-height: 1.5em
   min-width: 250px
@@ -214,7 +220,7 @@ body
 
 
 ///////////////////////////////////////////////////
-/////////////        Login          ///////////////
+/////////////        Auth          ////////////////
 ///////////////////////////////////////////////////
 
 
@@ -265,6 +271,50 @@ body
     font-size: 13px
     cursor: pointer
 
+.auth__footer
+  display: flex
+  justify-content: space-between
 
+.auth__link
+  align-self: center
+.link__auth
+  text-decoration: none
+  color: $darkPinkAuth
+  transition: color .3s
+  &:hover
+    color: $lightPinkAuth
+
+
+
+////////////////////////////////////////////
+//////////////     PROFILE       ///////////
+////////////////////////////////////////////
+
+.profile
+  display: flex
+  flex-direction: column
+
+  flex-basis: 100%
+
+.profile__header
+  display: flex
+  flex-basis: 100%
+  flex-direction: column
+  align-items: center
+  flex-wrap: wrap
+
+.profile__main
+  display: flex
+  margin-top: 20px
+  justify-content: center
+  flex-wrap: wrap
+  .profile__user
+    margin-left: 15px
+  .user_name
+    color: $logo
+
+.profile__photo
+  height: 120px
+  border-radius: 50%
 
 @import "media"
